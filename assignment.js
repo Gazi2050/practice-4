@@ -53,3 +53,21 @@ function oilPrice(diesel, petrol, octane) {
 }
 let oils = oilPrice(2, 2, 2);
 console.log(oils);
+
+/*(4)
+Function name : publicBusFare;
+people :117
+Bus capacity : 50; (Bus :2)
+Micro capacity : 11; (Micro :1)
+Public bus price : 250;
+Output : total public bus cost ;
+*/
+function publicBusFare(people) {
+    const publicBusPrice = 250;
+    let afterBus = people - 100;
+    let MicroPeople = afterBus - 11;
+    let totalPublicBusPrice = publicBusPrice * MicroPeople;
+    return totalPublicBusPrice;
+}
+let totalPublicBusCost = publicBusFare(117);
+console.log(totalPublicBusCost);
