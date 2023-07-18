@@ -35,7 +35,6 @@ console.log(nameOfFile);
 
 /*(3)
 Function name : oilPrice
-Parameter Count : 3
 diesel price 114TK/litre
 Petrol price 130TK/litre
 Octane price 135Tk/litre
@@ -71,3 +70,31 @@ function publicBusFare(people) {
 }
 let totalPublicBusCost = publicBusFare(117);
 console.log(totalPublicBusCost);
+
+/*(5)
+Function name : isBestFriend;
+Output : check both are their best friends?
+*/
+let profile1 = {
+    name: 'rock',
+    friend: 'Jhon'
+}
+let profile2 = {
+    name: 'Jhon',
+    friend: 'rock'
+}
+function isBestFriend(friend1, friend2) {
+    if (typeof friend1.name !== 'string' || typeof friend1.friend !== 'string' || typeof friend2.name !== 'string' || typeof friend2.friend !== 'string') {
+        return "Please enter a name"
+    }
+    if (friend1.name === friend2.friend && friend1.friend === friend2.name) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+let BestFriends = isBestFriend(profile1, profile2);
+console.log(BestFriends);
+
+//////////////////////////////END/////////////////////////////////////
